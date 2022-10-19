@@ -1,6 +1,7 @@
 import { useState } from "react";
-import FontRow from "../components/FontRow";
 import { useEffect } from "react";
+import axios from "axios";
+import FontBox from "../components/FontBox";
 
 function MarketPlace() {
   const [fontsList, setFontsList] = useState([
@@ -35,6 +36,17 @@ function MarketPlace() {
       fontLink: "poppinlink",
     },
   ]);
+  useEffect(() => {
+    const fetchFonts = async () => {
+      await axios
+        .get("https://api-fontverse.herokuapp.com/api/font/getfonts")
+        .then((res) => {
+          setFontsList(res.data.data);
+        });
+    };
+
+    fetchFonts();
+  }, []);
 
   const [selectedFonts, setSelectedFonts] = useState([]);
   useEffect(() => {
@@ -53,27 +65,15 @@ function MarketPlace() {
     <>
       <div className="marketplace__container">
         <div className="marketplace__section">
-          <h1>Your Collection</h1>
-          <div className="seleted__fonts">
-            <div className="selected__fonts__collection">
-              {selectedFonts.map((font) => {
-                return <span>{font.fontDisplayName}</span>;
-              })}
-            </div>
-            <div className="selected__fonts__code_snippet"></div>
-          </div>
-        </div>
-        <div className="marketplace__section">
           <h1>Featured Fonts</h1>
-          <FontRow fontsList={fontsList} selectedFonts={addFonts} />
-        </div>
-        <div className="marketplace__section">
-          <h1>Top Fonts</h1>
-          <FontRow fontsList={fontsList} selectedFonts={addFonts} />
-        </div>
-        <div className="marketplace__section">
-          <h1>Latest Fonts</h1>
-          <FontRow fontsList={fontsList} selectedFonts={addFonts} />
+          {fontsList.map((font) => {
+            return (
+              <FontBox
+                fontFamily={font.fontName}
+                fontWeight={font.fontWeight}
+              />
+            );
+          })}
         </div>
       </div>
     </>

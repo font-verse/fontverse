@@ -50,9 +50,9 @@ function UploadFont() {
     return word[0].toUpperCase() + word.slice(1).toLowerCase();
   }
 
-  // useEffect(() => {
-  //   console.log(file);
-  // }, [file]);
+  useEffect(() => {
+    console.log(fontStyle);
+  }, [fontStyle]);
 
   return (
     <div className="uploadfont__container">
@@ -186,6 +186,22 @@ function UploadFont() {
                 id={active === "900" ? "active" : ""}
               >
                 900
+              </button>
+            </div>
+            <div className="uploadfont__fontweight">
+              <button
+                onClick={() => {
+                  setFontStyle("normal");
+                }}
+              >
+                normal
+              </button>
+              <button
+                onClick={() => {
+                  setFontStyle("italic");
+                }}
+              >
+                italic
               </button>
             </div>
             <div className="uploadfont__right__button">
