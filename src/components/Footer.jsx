@@ -1,46 +1,83 @@
-import "../App.css";
+import { BsGithub } from "react-icons/bs";
+import { BsTwitter } from "react-icons/bs";
+import { BsInstagram } from "react-icons/bs";
 
 function Footer() {
   return (
-    <div className="footer">
-      <div className="footer__container">
-        <div className="footer__sections">
-          <div className="footer__section">
-            <h1>Follow Us</h1>
-            <a href="">
-              <span>Twitter</span>
+    <div className="">
+      <div className="h-full flex flex-col justify-between bg-dark-200 text-light">
+        <div className="flex justify-around my-16">
+          <div className="flex flex-col">
+            <h1 className="text-3xl font-[Mattone] text-purple-500 mb-5">
+              Follow Us
+            </h1>
+            <div className="flex justify-between items-center">
+              <BsGithub
+                fontSize={30}
+                className="cursor-pointer hover:text-[#a6b1b7] "
+              />
+              <BsTwitter
+                fontSize={30}
+                className="cursor-pointer hover:text-[#1da1f2]"
+              />
+              <BsInstagram
+                fontSize={30}
+                className="cursor-pointer text-light overflow-hidden hover:text-purple-500"
+              />
+            </div>
+          </div>
+          <div className="flex flex-col">
+            <h1 className="text-3xl font-[Mattone] text-purple-500 mb-5">
+              Blogs
+            </h1>
+            <a href="/">
+              <span>span</span>
             </a>
-            <a href="">
-              <span>Instagram</span>
+            <a href="/">
+              <span>span</span>
             </a>
-            <a href="">
-              <span>Github</span>
+            <a href="/">
+              <span>span</span>
+            </a>
+            <a href="/">
+              <span>span</span>
+            </a>
+            <a href="/">
+              <span>span</span>
+            </a>
+            <a href="/">
+              <span>span</span>
             </a>
           </div>
-          <div className="footer__section">
-            <h1>Blogs</h1>
-            <a href="">
+          <div className="flex flex-col">
+            <h1 className="text-3xl font-[Mattone] text-purple-500 mb-5">
+              Blogs
+            </h1>
+            <a href="/">
               <span>span</span>
             </a>
-            <a href="">
+            <a href="/">
               <span>span</span>
             </a>
-            <a href="">
+            <a href="/">
               <span>span</span>
             </a>
-            <a href="">
+            <a href="/">
               <span>span</span>
             </a>
-            <a href="">
+            <a href="/">
               <span>span</span>
             </a>
-            <a href="">
+            <a href="/">
               <span>span</span>
             </a>
           </div>
         </div>
-        <div className="footer__credit">
-          <span>Made by Joe Felix</span>
+        <div className="flex justify-center items-center py-5">
+          <span className=" font-light text-sm ">
+            &#169; Designed & Developed by{" "}
+            <a className="font-[Mattone]">Joe Felix</a> & Team&#8482;
+          </span>
         </div>
       </div>
     </div>

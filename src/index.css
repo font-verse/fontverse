@@ -1,8 +1,230 @@
-@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Montserrat:wght@400;500&family=Poppins:wght@400;500&family=Roboto:wght@400;500&display=swap');
+a:hover {
+  color: rgb(157, 80, 232);
+}
+
+a {
+  cursor: pointer;
+}
+
+.box-shadow {
+  box-shadow: 26px 26px 51px #b500d516,
+    -26px -26px 51px #f200ff10;
+}
+
+.gradient-1 {
+  background-image: linear-gradient(to right bottom, #0f172a, #0f172a, #0f172a, #0f172a, #0f172a, #121d3a, #16244a, #1b2a5a, #2f377f, #4d43a4, #724bc7, #9d50e8);
+}
+
+.gradient-2 {
+  background-image: linear-gradient(to left top, #0f172a, #0f172a, #0f172a, #0f172a, #0f172a, #121d3a, #16244a, #1b2a5a, #2f377f, #4d43a4, #724bc7, #9d50e8);
+}
+
+.gradient-3 {
+  background-image: linear-gradient(to top, #0f172a, #0f172a, #0f172a, #0f172a, #0f172a, #121d3a, #16244a, #1b2a5a, #2f377f, #4d43a4, #724bc7, #9d50e8);
+}
+
+.gradient-4 {
+  background-image: linear-gradient(to right, #0f172a, #0f172a, #0f172a, #0f172a, #0f172a, #121d3a, #16244a, #1b2a5a, #2f377f, #4d43a4, #724bc7, #9d50e8);
+}
+
+.plus-gradient {
+  background: rgb(15, 23, 42);
+  background: linear-gradient(90deg, rgba(15, 23, 42, 0) 0%, rgba(147, 51, 234, 1) 42%);
+}
+
+.button-gradient {
+  background: rgb(147, 51, 234);
+  background: linear-gradient(143deg, rgba(147, 51, 234, 1) 0%, rgba(211, 0, 255, 1) 100%);
+}
+
+/* .button-gradient {
+  background: rgb(131, 58, 180);
+  background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(236, 0, 255, 1) 100%);
+} */
+
+/* .button-gradient {
+  background: rgb(147, 51, 234);
+  background: linear-gradient(165deg, rgba(147, 51, 234, 1) 0%, rgba(202, 0, 255, 1) 100%);
+} */
+
+/* .button-gradient {
+  background: rgb(147, 51, 234);
+  background: linear-gradient(165deg, rgba(147, 51, 234, 1) 0%, rgba(112, 14, 138, 1) 100%);
+} */
+
+.text-shadow {
+  text-shadow: 0px 0px 20px #0f172a;
+}
+
+.text-scroll-container {
+  overflow: auto;
+  white-space: nowrap;
+  font-size: 5rem;
+  flex-wrap: nowrap;
+  position: relative;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.text-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.text-scroll-left {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 60s linear infinite;
+  letter-spacing: 1.5rem;
+}
+
+
+.text-scroll-right {
+  display: inline-block;
+  padding-left: 100%;
+  animation: number 30s linear infinite;
+  letter-spacing: 1.5rem;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+
+@keyframes number {
+  0% {
+    transform: translate(-100%, 0);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.font-box {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  min-height: 60vh;
+  max-width: 1000px;
+  margin: 3rem 1rem;
+  padding: 20px;
+  border: 2px solid var(--violet);
+  border-radius: 30px;
+  /* box-shadow: 3px 10px 40px -3px rgba(1, 1, 1, 0.1); */
+  /* border-radius: 50px; */
+  /* background: #d400fa; */
+  box-shadow: 26px 26px 51px #b500d516,
+    -26px -26px 51px #f200ff10;
+}
+
+.font-box-heading {
+  flex: 1;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #41004d; */
+}
+
+.font-box-heading span {
+  font-size: 2rem;
+}
+
+.font-box-preview {
+  height: 80px;
+  flex: 3;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.font-box-preview span {
+  font-size: 55px;
+}
+
+.font-box-options svg {
+  height: 2rem;
+  cursor: pointer;
+}
+
+
+.font-box-tools {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+}
+
+
+.font-box-styles {
+  /* background-color: red; */
+  width: 50%;
+  display: flex;
+
+  align-items: center;
+}
+
+.font-box-styles svg {
+  height: 1rem;
+}
+
+.font-box-buttons {
+  display: flex;
+  /* background-color: #a900c7; */
+  width: 11rem;
+  justify-content: space-between;
+}
+
+.font-box-styles button {
+  width: 5rem;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid #fff;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.font-box-styles button svg {
+  /* background-color: #fff; */
+  fill: #fff;
+}
+
+
+.font-box-options {
+  /* background-color: #a900c7; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 5rem;
+}
+
+.footer-gradient {
+  background: rgb(147, 51, 234);
+  background: linear-gradient(0deg, rgba(147, 51, 234, 1) 0%, rgba(15, 23, 42, 1) 100%);
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 
 * {
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins";
+  overflow-x: hidden;
 }
