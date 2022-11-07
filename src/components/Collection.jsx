@@ -53,7 +53,7 @@ function Collection() {
   }, [selectedFonts]);
 
   return (
-    <div className=" bg-dark-200 fixed h-full w-full z-[45] text-center md:text-left flex items-center justify-center overflow-scroll">
+    <div className=" bg-dark-200 fixed h-full w-full z-[45] text-center md:text-left flex items-center justify-center">
       <div className="flex justify-center md:justify-between md:flex-row flex-col h-screen md:max-w-[1024px] md:pt-0 pt-24">
         <div className="flex-1 flex flex-col py-20 md:w-[50%] w-full ">
           <span className="text-light text-2xl font-[Mattone] mb-5">
