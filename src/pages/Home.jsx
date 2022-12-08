@@ -1,12 +1,11 @@
 import "../App.css";
-import { useState } from "react";
 import TextScroll from "../components/TextScroll";
 import Catagories from "../components/Catagories";
-
-import { useEffect } from "react";
 import Hero from "../components/Hero";
-import { useContext } from "react";
+
 import { FontContext } from "../context/FontContext";
+import { useEffect } from "react";
+import { useContext } from "react";
 
 function Home() {
   const { fontsList, fetchFonts, fontName, setFontName, fetchFontByName } =

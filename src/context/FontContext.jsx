@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 
 export const FontContext = React.createContext();
 
 export const FontProvider = ({ children }) => {
   const [fontName, setFontName] = useState("");
-
   const [selectedFonts, setSelectedFonts] = useState([]);
   const [fontsList, setFontsList] = useState([]);
 
@@ -45,8 +44,6 @@ export const FontProvider = ({ children }) => {
     temp.splice(index, 1);
     setSelectedFonts(temp);
   };
-
-  const showCollection = () => {};
 
   return (
     <FontContext.Provider

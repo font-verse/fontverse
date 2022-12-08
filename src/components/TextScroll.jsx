@@ -2,8 +2,8 @@ import "../App.css";
 
 function TextScroll() {
   return (
-    <div className="h-[50vh] bg-transparent">
-      <div className="text-scroll-container">
+    <div className="h-[50vh] bg-transparent pointer-events-none">
+      <div className="text-scroll-container ">
         <span className="text-scroll-left text-light font-black">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
           sapiente animi voluptate! Quos sunt incidunt aliquid{" "}

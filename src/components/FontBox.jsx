@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { MdFavoriteBorder, MdFavorite } from "react-icons/md";
 import { BsDownload, BsTypeBold, BsTypeItalic } from "react-icons/bs";
+
 function FontBox({ fontFamily, fontWeight, fontUrl }) {
   const [favorite, setFavorite] = useState(false);
 

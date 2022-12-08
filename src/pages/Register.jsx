@@ -1,7 +1,28 @@
 import { Input, Button } from "../components/Components";
 import { BsGoogle } from "react-icons/bs";
+import { useState } from "react";
+import axios from "axios";
 
 function Register() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+
+  const handleSignUp = async () => {
+    const user = {
+      email: email,
+      password: password,
+    };
+
+    if (confirmPassword == password) {
+      const signUp = await axios.post(
+        "https://api-fontverse.herokuapp.com/api/user/auth/signin",
+        user
+      );
+      console.log(signUp);
+    }
+  };
+
   return (
     // flex justify-between items-center
     <div className="min-h-screen flex text-light gradient-3">
@@ -14,12 +35,26 @@ function Register() {
           </button>
         </div>
         <div className="flex flex-col">
-          <Input type="text" placeholder="Email" />
-          <Input type="password" placeholder="Password" />
-          <Input type="password" placeholder="Confirm Password" />
+          <Input type="text" placeholder="Email" setInput={setEmail} />
+          <Input
+            type="password"
+            placeholder="Password"
+            setInput={setPassword}
+          />
+          <Input
+            type="password"
+            placeholder="Confirm Password"
+            setInput={setConfirmPassword}
+          />
         </div>
         <div className="flex">
-          <Button text="Signin" width={"[20rem]"} height={14} textSize="lg" />
+          <Button
+            text="Signin"
+            width={"[20rem]"}
+            height={14}
+            textSize="lg"
+            func={handleSignUp}
+          />
         </div>
       </div>
       {/* <div className="flex-1 md:flex hidden"></div> */}
